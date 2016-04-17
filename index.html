@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Particles</title>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <link href="./css/front-page.css" type="text/css" rel="stylesheet"/>
+  <style>
+  .nav-bar {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: #b20000;
+    font-size: 50px;
+    color: white;
+  }
+
+  .main-container:after {
+    content: "";
+    clear:both;
+    display: block;
+  }
+
+  .main-container {
+    margin-top: 50px;
+    background-color: transparent;
+  }
+
+  .panel{
+    float: left;
+    display: inline-block;
+    width: 100px;
+    height: 1000px;
+  }
+
+  .center-container {
+    float: left;
+    display: inline-block;
+    width: 1050px;
+    height: 1000px;
+  }
+
+  .description {
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  #game-canvas {
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+  }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    Here are some text
+  </nav>
+
+  <section class="main-container">
+    <div class="panel">
+      Place Holder
+    </div>
+    <section class="center-container">
+      <article>
+        <canvas id="game-canvas" width="800" height="400">
+      </article>
+      <div class="slider_container">
+        <input type="range" value="0.0" data-steps="10" id="sliderInput"/>
+      </div>
+      <div class="description">
+        Use slider to control volume of the game
+      </div>
+    </section>
+    <div class="panel">
+      Place Holder
+    </div>
+  </section>
+
+  <script type='text/javascript' src="./lib/bundle.js"></script>
+
+</body>
+</html>
