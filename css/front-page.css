@@ -1,6 +1,72 @@
+* {
+  font-family: Roboto;
+}
+
 body {
   background: #eee;
 }
+
+button {
+  display: inline-block;
+  height: 30px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.nav-bar {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: #b20000;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  display: inline-block;
+  font-size: 42px;
+  font-weight: bold;
+  margin: 20px 20px 20px 20px;
+  color: white;
+}
+
+.main-container:after {
+  content: "";
+  clear:both;
+  display: block;
+}
+
+.main-container {
+  margin-top: 50px;
+  background-color: transparent;
+}
+
+.panel{
+  float: left;
+  display: inline-block;
+  width: 100px;
+  height: 1000px;
+}
+
+.main-console{
+  float: left;
+  display: inline-block;
+  width: 1050px;
+  height: 1000px;
+}
+
+.description {
+  display: inline-block;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+#game-canvas {
+  border: 1px solid black;
+  display: block;
+  margin: 0 auto;
+}
+
 .slider_container {
   display: inline-block;
   float: left;
@@ -12,11 +78,13 @@ body {
   margin-top: 10px;
   margin-left: 140px;
 }
+
 .vslider {
   position: relative;
   display: inline-block;
   height: 36px;
 }
+
 .vslider * {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -25,6 +93,7 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+
 .vslider_sticks {
   position: relative;
   width: 100%;
@@ -33,6 +102,7 @@ body {
   padding: 0;
   display: block;
 }
+
 .vslider_sticks > li {
   position: relative;
   text-indent: -99999px;
@@ -50,13 +120,16 @@ body {
   -o-transition: height 60ms ease-out, top 60ms ease-out;
   transition: height 60ms ease-out, top 60ms ease-out;
 }
+
 .vslider_sticks > li:last-child {
   margin-right: 0;
 }
+
 .vslider_sticks > li.active {
   height: 100%;
   top: 0;
 }
+
 .vslider_stick {
   width: 100%;
   height: 100%;
