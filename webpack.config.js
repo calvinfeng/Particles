@@ -6,5 +6,9 @@ module.exports = {
   },
   module: {
     loaders: []
+  },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ["", ".js", ".jsx"]
   }
 };

@@ -5,6 +5,8 @@
   <title>Particles</title>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,700" type="text/css">
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
   <link href="./css/front-page.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
@@ -26,12 +28,42 @@
       <article>
         <canvas id="game-canvas" width="800" height="400">
       </article>
-      <div class="slider_container">
-        <input type="range" value="0.0" data-steps="10" id="sliderInput"/>
-      </div>
-      <div class="description">
-        Use slider to control volume of the game
-      </div>
+      <article>
+        <div class="slider_container">
+          <input type="range" value="0.0" data-steps="10" id="sliderInput"/>
+        </div>
+        <div class="description">
+          Use slider to control volume of the game
+        </div>
+      </article>
+      <article>
+        <p>
+          <h1>Elastic means No Sound</h1>
+          Particles within the container will collide without losing their kinetic
+          energy. Their kinetic energy may transfer to one another, but the net KE
+          will conserve. However, as soon as you turn up the volume. Kinetic energy
+          will no longer conserve. The energy will dissipate through sound. Eventually,
+          these particles will come to a stop.
+        </p>
+        <p>
+          <h1>The Math</h1>
+          Please keep in mind, all variables are vectors except that mass is scalar. The x's denote
+          the position of the two particle at the instance of impact.
+          <h4 id="math1" style="font-size: 18px"></h4>
+          <h4 id="math2" style="font-size: 18px"></h4>
+          <script>
+          var el1 = document.getElementById("math1");
+          katex.render(
+            "v_{1}\\prime = v_{1} - \\frac{2m_{2}}{m_{1} + m_{2}} \\frac{(v_{1} - v_{2})\\cdot(x_{1} - x_{2})}{\\|x_{1} - x_{2}\\|^{2}}",
+            el1);
+            var el2 = document.getElementById("math2");
+            katex.render(
+              "v_{2}\\prime = v_{2} - \\frac{2m_{1}}{m_{1} + m_{2}} \\frac{(v_{2} - v_{1})\\cdot(x_{2} - x_{1})}{\\|x_{2} - x_{1}\\|^{2}}",
+              el2);
+          </script>
+        </p>
+      </article>
+
     </section>
     <!-- Panel caontains buttons and user inputs -->
     <div class="panel">
@@ -39,8 +71,6 @@
       <button>Holder</button>
     </div>
   </section>
-
   <script type='text/javascript' src="./lib/bundle.js"></script>
-
 </body>
 </html>

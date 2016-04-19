@@ -2,8 +2,14 @@
   font-family: Roboto;
 }
 
-body {
-  background: #eee;
+p:after {
+  display: block;
+  clear: both;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 button {
@@ -11,6 +17,19 @@ button {
   height: 30px;
   width: 100px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #b20000;
+  color: white;
+}
+
+article {
+  margin: 20px 20px 20px 20px;
+}
+
+article:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 .nav-bar {
@@ -59,7 +78,7 @@ button {
   display: inline-block;
   float: left;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 #game-canvas {
   border: 1px solid black;
@@ -75,7 +94,6 @@ button {
   /*left: 50%;*/
   /*margin-top: -18px;
   margin-left: -23px;*/
-  margin-top: 10px;
   margin-left: 140px;
 }
 
